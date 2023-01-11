@@ -1,4 +1,4 @@
-interface PlugCheckoutFullBoletoTransactionSuccess {
+interface MalgaCheckoutFullBoletoTransactionSuccess {
   id: string
   clientId: string
   createdAt: string
@@ -36,13 +36,13 @@ interface PlugCheckoutFullBoletoTransactionSuccess {
   }[]
 }
 
-interface PlugCheckoutFullBoletoTransactionError {
+interface MalgaCheckoutFullBoletoTransactionError {
   type: string
   message: string
   errorStack: unknown
 }
 
-interface PlugCheckoutFullCreditTransactionSuccess {
+interface MalgaCheckoutFullCreditTransactionSuccess {
   id: string
   clientId: string
   createdAt: string
@@ -75,7 +75,7 @@ interface PlugCheckoutFullCreditTransactionSuccess {
   }[]
 }
 
-interface PlugCheckoutFullCreditTransactionError {
+interface MalgaCheckoutFullCreditTransactionError {
   type: string
   message: string
   code?: number
@@ -83,7 +83,7 @@ interface PlugCheckoutFullCreditTransactionError {
   errorStack: unknown
 }
 
-interface PlugCheckoutFullPixTransactionSuccess {
+interface MalgaCheckoutFullPixTransactionSuccess {
   id: string
   clientId: string
   createdAt: string
@@ -126,26 +126,26 @@ interface PlugCheckoutFullPixTransactionSuccess {
   }[]
 }
 
-interface PlugCheckoutFullPixTransactionError {
+interface MalgaCheckoutFullPixTransactionError {
   type: string
   message: string
   errorStack: unknown
 }
 
-type PlugCheckoutFullTransactionSuccess =
-  | PlugCheckoutFullBoletoTransactionSuccess
-  | PlugCheckoutFullCreditTransactionSuccess
-  | PlugCheckoutFullPixTransactionSuccess
+type MalgaCheckoutFullTransactionSuccess =
+  | MalgaCheckoutFullBoletoTransactionSuccess
+  | MalgaCheckoutFullCreditTransactionSuccess
+  | MalgaCheckoutFullPixTransactionSuccess
 
-type PlugCheckoutFullTransactionError =
-  | PlugCheckoutFullBoletoTransactionError
-  | PlugCheckoutFullCreditTransactionError
-  | PlugCheckoutFullPixTransactionError
+type MalgaCheckoutFullTransactionError =
+  | MalgaCheckoutFullBoletoTransactionError
+  | MalgaCheckoutFullCreditTransactionError
+  | MalgaCheckoutFullPixTransactionError
 
-export type PlugCheckoutFullTransactionSuccessEvent = CustomEvent<{
-  data: PlugCheckoutFullTransactionSuccess
+export type MalgaCheckoutFullTransactionSuccessEvent = CustomEvent<{
+  data: MalgaCheckoutFullTransactionSuccess
 }>
 
-export type PlugCheckoutFullTransactionErrorEvent = CustomEvent<{
-  error: PlugCheckoutFullTransactionError
+export type MalgaCheckoutFullTransactionErrorEvent = CustomEvent<{
+  error: MalgaCheckoutFullTransactionError
 }>
